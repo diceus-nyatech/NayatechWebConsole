@@ -1,0 +1,145 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "./colors.scss";
+@import "./navbar.scss";
+@import '~angular-tree-component/dist/angular-tree-component.css';
+@import "~bootstrap-slider/dist/css/bootstrap-slider.min.css";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzJ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTZ1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Open Sans Extrabold"), local("OpenSans-Extrabold"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hp1r3JsPcQLi8jytr04NNhU.woff) format('woff');
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(https://themes.googleusercontent.com/static/fonts/opensans/v6/K88pR3goAWT7BTt32Z01mz8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+html{
+  height: 100vh;
+}
+
+body{
+  font-family: "Open Sans", "Roboto", sans-serif;
+  font-size: 14px;
+  background-color: $Tarawera;
+  height: 100%;
+}
+
+.nav-pills .nav-link{
+  border-radius: 0;
+}
+
+.text-line-break-dots{
+  @include text-line-break-dots;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+.z-index-override{
+  z-index: 99;
+}
+
+.right-border-panel{
+  border-right: 2px solid $Silver;
+}
+
+.bold-text{
+  font-weight: 700;
+}
+
+.underline-link{
+  border-bottom: 1px dashed;
+  line-height: 1.2;
+}
+.underline-link:hover{
+  border-bottom: 1px solid;
+}
+
+// .underline-solid {
+//   border-bottom: 1px solid;
+// }
+
+.cursor-pointer{
+  cursor: pointer;
+}
+//bootstrap overrides
+
+//buttons
+.btn {
+  border-radius: 4px;
+}
+.btn:focus{
+  box-shadow: none;
+}
+.btn-primary {
+  background-color: $DodgerBlue;
+}
+.btn-primary:hover {
+  background-color: $White;
+  border-color: $DodgerBlue;
+  color: $DodgerBlue;
+}
+
+.btn-default {
+  color: $SantasGray;
+  background-color: $White;
+  border: 1px solid;
+}
+
+.btn-default:hover{
+  background-color: $White;
+  border: 1px solid $DodgerBlue;
+}
+
+.btn-warning {
+  background-color: $YellowOrange;
+  border-color: $YellowOrange;
+}
+.btn-warning:hover{
+  background-color: $White;
+  border-color: $YellowOrange;
+  color: $YellowOrange;
+}
+
+.btn-def {
+  background-color: $Alabaster;
+  border: 1px solid $Iron;
+}
+//other controls
+.text-primary{
+  color: $DodgerBlue !important;
+}
+a.text-primary:hover,
+.text-primary:hover,
+a.text-danger:hover,
+.text-danger:hover{
+  color: black !important;
+}
+
+// .custom-checkbox{
+//   .custom-control-input:checked ~ .custom-control-indicator{
+//     background-color: $White;
+//     color: $DodgerBlue;
+//   }
+// }
+

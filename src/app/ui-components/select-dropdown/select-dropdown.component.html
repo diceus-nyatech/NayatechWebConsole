@@ -1,0 +1,9 @@
+<div class="multiselect-dropdown mb-3">
+  <div class="multiselect-dropdown-name mb-2">{{name}}</div>
+  <ng-select [allowClear]="true"
+    [items]="selectOptions"
+    (selected)="selected($event)"
+    placeholder="{{textPlaceholder}}">
+  </ng-select>
+</div>
+

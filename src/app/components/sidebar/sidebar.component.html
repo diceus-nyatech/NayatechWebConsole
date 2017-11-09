@@ -1,0 +1,55 @@
+<nav class="sidebar bg-sidebar-azure float-left" [ngClass]="{'sidebar-opened' : sidebarIsOpen}">
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item nav-link-border-bottom" (click)="toggleSidebar()">
+      <span class="nav-link d-flex align-items-center">
+        <!-- <i class="fa fa-bars"></i> -->
+        <i-menu class="nav-link-icon nav-link-toggle-color"></i-menu>
+      </span>
+    </li>
+    <li class="nav-item nav-link-border-bottom nav-link-border-left mt-4">
+      <a class="nav-link d-flex align-items-center" [routerLink]="'/dashboard/home'" [routerLinkActive]="'active'">
+        <!-- <i class="fa fa-question align-middle"></i> -->
+        <!-- <i-align-justify></i-align-justify> -->
+        <i-home class="nav-link-icon nav-link-color"></i-home>
+        <span class="mx-2 text-line-break-dots">Home</span>
+      </a>
+    </li>
+    <li class="nav-item nav-link-border-bottom nav-link-border-left">
+      <a class="nav-link d-flex align-items-center" [routerLink]="'/'" [routerLinkActive]="'active'">
+        <!-- <i class="fa fa-question align-middle"></i> -->
+        <i-bar-chart-2 class="nav-link-icon nav-link-color"></i-bar-chart-2>
+        <span class="mx-2 text-line-break-dots">Analyze</span>
+      </a>
+    </li>
+    <li class="nav-item nav-link-border-bottom nav-link-border-left">
+      <a class="nav-link d-flex align-items-center" [routerLink]="'/dashboard/executive-screen'" [routerLinkActive]="'active'">
+        <!-- <i class="fa fa-dashboard align-middle"></i> -->
+        <i-repeat class="nav-link-icon nav-link-color"></i-repeat>
+        <span class="mx-2 text-line-break-dots">Migrate</span>
+        <!-- <span class="sr-only">(current)</span> -->
+      </a>
+    </li>
+    <li class="nav-item nav-link-border-bottom nav-link-border-left">
+      <a class="nav-link d-flex align-items-center" [routerLink]="'/'" [routerLinkActive]="'active'">
+        <!-- <i class="fa fa-question align-middle"></i> -->
+        <i-search class="nav-link-icon nav-link-color"></i-search>
+        <span class="mx-2 text-line-break-dots">Scan</span>
+      </a>
+    </li>
+    <!-- <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" [routerLink]="'/dashboard/playbook'" [routerLinkActive]="'active'">
+        <span>
+          <i class="fa fa-book align-middle"></i>
+        </span>
+        <span class="mx-2 text-line-break-dots">Playbook</span>
+      </a>
+    </li> -->
+    <li class="nav-item nav-link-border-left">
+      <a class="nav-link d-flex align-items-center" [routerLink]="'/dashboard/help'" [routerLinkActive]="'active'">
+        <!-- <i class="fa fa-question align-middle"></i> -->
+        <i-help-circle class="nav-link-icon nav-link-color"></i-help-circle>
+        <span class="mx-2 text-line-break-dots">Help</span>
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,12 @@
+<div class="multiselect-dropdown" [ngClass]="marginBottomClass">
+  <div class="multiselect-dropdown-name mb-2">{{name}}</div>
+  <ss-multiselect-dropdown
+      [(ngModel)]="optionsModel"
+      [options]="multiselectOptions"
+      [settings]="multiselectSettings"
+      [texts]="multiselectTexts"
+      [disabled]="disabled"
+      (ngModelChange)="onChange($event)"
+      (onFilter)="test()">
+  </ss-multiselect-dropdown>
+</div>

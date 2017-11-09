@@ -1,0 +1,22 @@
+<!-- <div class="component-executive-screen"> -->
+<!-- <app-window-header [name]="'Analyze'"></app-window-header> -->
+<app-quick-search [hidden]="!showSearch"
+  [selectedServers]="selectedServers" [selectedFeatures]="selectedFeatures" [selectedInstances]="selectedInstances"
+  (deleteMeEvent)="hideSearchSidebar()" (openAdvancedFilterEvent)="openAdvancedFilter('Advanced Filter')"
+  (openExecutiveDashboardEvent)="openExecutiveDashboard($event)">
+</app-quick-search>
+<!-- <button (click)="createComponent()" class="btn btn-danger">Click</button> -->
+<div class="container-window">
+    <ng-template #advancedFilterComponent></ng-template>
+  <ng-template #executiveWindowBodyComponent></ng-template>
+  <ng-template #dbaWindowBodyComponent></ng-template>
+  <ng-template #dbaDetailedWindowBodyComponent></ng-template>
+</div>
+
+
+
+
+<!-- </div> -->
+<!-- <app-window-body *ngIf="showFilter" [name]="'Advanced filter'" (deleteMeEvent)="destroyFilter()">
+    <div class="container-feature-info"></div>
+</app-window-body> -->

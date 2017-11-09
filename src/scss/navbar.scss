@@ -1,0 +1,28 @@
+@import "./mixins.scss";
+// @mixin navbar-border-color{
+//   color: $TundoraBorder
+// }
+
+.nav-link,
+.nav-link:hover,
+.nav-link:focus,
+.nav-link .active
+{
+  font-size: 14px;
+  @include nav-item-pad-h;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: $Bombay;
+}
+.nav-link:hover{
+  color: $Porcelain;
+}
+
+.nav-pills .nav-item.show .nav-link,
+.nav-link:hover,
+.nav-link.d-flex.align-items-center.active
+{
+  background-color: $EbonyClayDark;
+}

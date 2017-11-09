@@ -1,0 +1,62 @@
+@import "../../../scss/colors.scss";
+@import "../../../scss/mixins.scss";
+
+.sidebar{
+  // height: 95.9vh;
+  @include sidebar-height;
+  width: 14rem;
+  border-right: 1px solid $TundoraBorder;
+
+  .fa{
+    width: 0.8rem;
+  }
+
+  .fa-dashboard:before{
+    color: green;
+  }
+
+  .fa-book{
+    color: deepskyblue;
+  }
+
+  .fa-question{
+    color: orange;
+  }
+}
+
+nav.sidebar.bg-sidebar-azure.sidebar-opened{
+  width: 3.5rem;
+}
+
+.nav-link{
+  .nav-link-icon{
+    display: flex;
+    width: 18px
+  }
+  .nav-link-color{
+    color: $DodgerBlue;
+  }
+  .nav-link-toggle{
+    display: flex;
+    width: 26px
+  }
+  .nav-link-toggle-color{
+    color: $Porcelain;
+  }
+}
+
+.nav-link-border-bottom{
+  border-bottom: 1px solid $EbonyClayDivider;
+}
+
+.nav-link-border-left:hover{
+  border-left: 2px solid $DodgerBlue;
+}
+
+
+.bg-sidebar-azure{
+  background-color: $EbonyClayLight;
+}
+
+
+

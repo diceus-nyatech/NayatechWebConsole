@@ -1,0 +1,7 @@
+<!-- <app-window-header [name]="'Playbook'"></app-window-header> -->
+<app-playbook-search *ngIf="showSearch" (deleteMeEvent)="destroySearch()"></app-playbook-search>
+
+<app-window-body *ngIf="showBody" [name]="'Feature info'" (deleteMeEvent)="destroyBody()">
+    <div class="container-feature-info" [innerHTML]="htmlTemplate | safeHtmlPipe"></div>
+</app-window-body>
+

@@ -1,0 +1,20 @@
+<!-- <div class="slider">
+  <input type="range" min="{{minValue}}" max="{{maxValue}}" step="{{step}}">
+</div> -->
+
+
+<div class="cost-reduction mr-4 d-flex justify-content-end">
+  <span class="slider-body">
+    <span class="slider-name mr-3">
+      Cost Reduction Goal:
+    </span>
+    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20"
+    data-slider-step="10000" [(ngModel)]="sliderValue" (change)="onChangeSliderValue($event)"/>
+    <!-- <input type="range" min="{{minValue}}" max="{{maxValue}}" step="{{step}}" [(ngModel)]="sliderValue" (change)="onChangeSliderValue($event)"> -->
+  </span>
+  <!-- <div class="slider-footer">${{sliderValue}}</div> -->
+  <!-- minval {{minValue}}
+  maxval {{maxValue}} -->
+</div>
+
+

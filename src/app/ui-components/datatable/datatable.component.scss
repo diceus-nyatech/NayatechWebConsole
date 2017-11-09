@@ -1,0 +1,42 @@
+@import "../../../scss/colors.scss";
+
+:host /deep/ {
+  .data-table {
+    .data-table-row:hover {
+      background-color: $Foam !important;
+    }
+    .select-column {
+      width: 1rem;
+    }
+  }
+  .pagination-range {
+    font-weight: bold;
+  }
+  .table th,
+  .table td {
+    padding: 1rem;
+
+    .btn {
+      line-height: 0.85;
+    }
+  }
+  .table.table-condensed.data-table {
+    box-shadow: none;
+  }
+  table {
+    .row-odd {
+      background-color: transparent;
+    }
+    thead {
+      display: none;
+      tr {
+        background-color: $Porcelain;
+      }
+    }
+  }
+
+  .refresh-button,
+  .column-selector-button {
+    visibility: hidden;
+  }
+}

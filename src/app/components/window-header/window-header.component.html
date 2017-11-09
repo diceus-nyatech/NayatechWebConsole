@@ -1,0 +1,8 @@
+<div [ngClass]="stylingClass" class="window-header d-flex justify-content-end">
+  <span class="window-header-name d-flex align-items-center mr-auto">
+    {{name}}
+  </span>
+  <span class="d-flex align-items-center">
+    <i class="fa fa-close window-header-operation" (click)="deleteMyself()"></i>
+  </span>
+</div>

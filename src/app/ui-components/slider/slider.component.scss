@@ -1,0 +1,52 @@
+@import "../../../scss/colors.scss";
+
+.cost-reduction {
+  // width: 100%;
+  .slider-name {
+  }
+  .slider-body {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 60%;
+    }
+  }
+  .slider-footer {
+    font-weight: 700;
+  }
+}
+
+// .slider.slider-horizontal:hover,
+//  .slider.slider-vertical:hover
+//   { .tooltip.tooltip-main { opacity: 1 !important; } }
+:host \deep\ {
+  // .tooltip {
+  //   .tooltip-main.top {
+  //     opacity: 1;
+  //     .tooltip-inner {
+  //       background-color: $White;
+  //     }
+  //   }
+  // }
+  // .custom-slider{
+  //   border: 10px solid black;
+  // }
+  // .tooltip.tooltip-main.top.custom-slider{
+  //   opacity: 1;
+  //   .tooltip-inner{
+  //     background-color: #fff;
+  //   }
+  // }
+  .slider-handle.custom {
+	background: transparent none;
+	/* You can customize the handle and set a background image */
+}
+
+/* Or display content like unicode characters or fontawesome icons */
+.slider-handle.custom::before {
+	line-height: 20px;
+	font-size: 20px;
+	content: '\2605'; /*unicode star character*/
+	color: #726204;
+}
+}

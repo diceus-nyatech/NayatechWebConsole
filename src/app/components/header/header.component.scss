@@ -1,0 +1,59 @@
+@import "../../../scss/colors.scss";
+@import "../../../scss/variables.scss";
+
+
+  // .logo{
+  //   background: url("../../../images/logo-2.png");
+  //   background-repeat: no-repeat;
+  //   background-size: 6rem 2rem;
+  //   width: 8rem;
+  //   height: 2rem;
+  // }
+
+  // .logout{
+  //   color: $White;
+  // }
+
+.navbar-azure{
+  background-color: $Shark;
+  font-size: 14px;
+  height: $navbarMainHeaderHeight;
+}
+
+.logo-text{
+  color:  #55b3ff;
+  font-size: 20px;
+}
+
+.dropdown-menu{
+  box-shadow: 0 5px 15px 2px rgba(0,0,0,.3);
+}
+
+.dropdown-toggle::after{
+  display: none;
+}
+
+.dropdown-logout{
+  min-width: 14rem;
+  font-size: 0.8rem;
+}
+
+.dropdown-item{
+  padding: 10px 1rem;
+  cursor: pointer;
+}
+
+.dropdown-item:hover{
+  background-color: $Concrete;
+}
+
+.position-icon-logout{
+  align-content: space-between;
+  display: flex;
+  width: 0.8rem;
+}
+
+.fill-error{
+  fill: $Crimson!important;
+}
+

@@ -1,0 +1,20 @@
+
+@import "../../../scss/colors.scss";
+@import "../../../scss/mixins.scss";
+
+:host /deep/ {
+  .btn-secondary{
+    @include dropdown-color;
+    @include dropdown-font-size;
+    .text-muted{
+      color: $Abbey !important;
+    }
+  }
+  .btn-secondary:hover{
+    @include dropdown-color-hover;
+  }
+}
+
+.multiselect-dropdown-name {
+  @include dropdown-name;
+}

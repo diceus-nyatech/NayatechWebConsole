@@ -1,0 +1,18 @@
+@import "../../../../scss/mixins.scss";
+
+
+.container-advanced-filter{
+  @include window-body-height;
+  overflow-y: auto;
+  @include color-main-window;
+}
+
+.show-btn{
+  position: relative;
+  top: 33%;
+}
+
+.underline-divider{
+  width: 100%;
+  border-bottom: 1px solid #e8e6e6;
+}

@@ -1,0 +1,39 @@
+<div class="container-feature-info container-fluid">
+  <div class="row mt-2">
+    <div class="col">
+      <button class="btn btn-sm btn-warning" (click)="downloadReport()">
+        <i class="fa fa-play-circle"></i>
+        <span>
+          DBA report
+        </span>
+      </button>
+      <button class="btn btn-sm btn-warning" (click)="showAllServersFeatures()">DBA view</button>
+    </div>
+    <!-- <div class="col">
+      <div class="d-flex justify-content-end show-btn">
+      </div>
+    </div> -->
+  </div>
+  <div class="row">
+    <div *ngFor="let chart of featuresChartsData" class="col-6">
+      <app-chart [title]="chart.title" [seriesName]="chart.seriesName" [chartItems]="chart.chartItems" [chartType]="'pie'" (onItemSelectEvent)="onChartItemSelect($event)"></app-chart>
+    </div>
+  </div>
+
+
+
+</div>
+<!-- <div class="row">
+    <div class="col">
+        <app-chart [title]="'Server 1'"
+        [seriesName]="'Score'" [chartItems]="featuresItems"
+        [chartType]="'pie'">
+      </app-chart>
+    </div>
+    <div class="col">
+        <app-chart [title]="'Server 2'"
+        [seriesName]="'Score'" [chartItems]="featuresItems"
+        [chartType]="'pie'">
+      </app-chart>
+    </div>
+  </div> -->

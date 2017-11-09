@@ -1,0 +1,47 @@
+<nav class="navbar-azure">
+  <ul class="nav nav-pills flex-row d-flex justify-content-end">
+    <li class="nav-item mr-auto">
+      <a class="nav-link d-flex align-items-center" href="#">
+           <span class="logo-text">NAYA Technologies</span>
+        </a>
+    </li>
+
+    <li dropdown class="nav-item d-flex btn-group">
+      <span dropdownToggle class="nav-link d-flex align-items-center dropdown-toggle" >
+            <span class="mx-2">igor@diceus.com</span>
+            <i class="fa fa-user align-middle"style="font-size: 1.6rem;"></i>
+        </span>
+      <ul *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown-logout m-0 p-0 border-0" role="menu">
+        <li role="menuitem">
+          <a class="dropdown-item d-flex justify-content-between" [routerLink]="'/login'">
+              <span>Sign out</span>
+              <div class="position-icon-logout fill-error">
+                  <svg viewBox="0 0 15 15" class="" role="presentation" focusable="false" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="FxSymbol0-005" width="100%" height="100%"><g><title></title><path d="M12.133 3.033a.995.995 0 1 0-1.408 1.408 4.543 4.543 0 0 1 1.336 3.225 4.544 4.544 0 0 1-1.336 3.225A4.547 4.547 0 0 1 7.5 12.227a4.54 4.54 0 0 1-3.224-1.336A4.544 4.544 0 0 1 2.94 7.666a4.543 4.543 0 0 1 1.336-3.225.995.995 0 1 0-1.408-1.408 6.537 6.537 0 0 0-1.92 4.633 6.535 6.535 0 0 0 1.92 4.633A6.537 6.537 0 0 0 7.5 14.218h.004a6.53 6.53 0 0 0 4.628-1.919 6.534 6.534 0 0 0 1.919-4.633 6.534 6.534 0 0 0-1.918-4.633zM7.5 8.662c.55 0 .996-.446.996-.996V1.655a.996.996 0 0 0-1.992 0v6.011c0 .55.446.996.996.996z"></path></g></svg>
+              </div>
+            </a></li>
+        <!-- <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li> -->
+        <!-- <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a></li> -->
+      </ul>
+    </li>
+    <!-- <li class="nav-item d-flex">
+        <a class="nav-link d-flex align-items-center" href="#">
+            <div class="btn-group" dropdown>
+                <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+                  Button dropdown <span class="caret"></span>
+                </button>
+
+                <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu">
+                  <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li class="divider dropdown-divider"></li>
+                  <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+                  </li>
+                </ul>
+              </div>
+          </a>
+      </li> -->
+  </ul>
+</nav>

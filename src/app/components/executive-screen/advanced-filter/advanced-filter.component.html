@@ -1,0 +1,67 @@
+<div class="container-advanced-filter container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="row mt-2">
+        <div class="col-12">
+          <app-multiselect-dropdown [selectedItems]="selectedServerList" [name]="'Server name'" [multiselectOptions]="serverList" (selectItemEvent)="useSelectedServers($event)"></app-multiselect-dropdown>
+        </div>
+        <div class="col-12">
+          <app-multiselect-dropdown [selectedItems]="selectedInstanceList" [name]="'Instance name'" [multiselectOptions]="instanceList"
+            (selectItemEvent)="useSelectedInstances($event)"></app-multiselect-dropdown>
+        </div>
+        <div class="col-12">
+          <app-multiselect-dropdown [selectedItems]="selectedDatabaseList" [name]="'Database name'" [multiselectOptions]="databaseList"
+            (selectItemEvent)="useSelectedDatabases($event)"></app-multiselect-dropdown>
+        </div>
+        <!-- <div class="row"> -->
+        <div class="col-12">
+          <app-multiselect-dropdown [selectedItems]="selectedOracleVersionList" [name]="'Oracle version'" [multiselectOptions]="oracleVersionList"
+            (selectItemEvent)="useSelectedOracleVersions($event)"></app-multiselect-dropdown>
+        </div>
+        <div class="col-12">
+          <app-multiselect-dropdown [selectedItems]="selectedCpuNumberList" [name]="'Number of CPUs'" [multiselectOptions]="cpuNumberList"
+            (selectItemEvent)="useSelectedCpuNumber($event)"></app-multiselect-dropdown>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+        <div class="col-12">
+          <app-multiselect-dropdown [selectedItems]="selectedFeatureList" [name]="'Oracle features'" [disabled]="multiselectFeaturesDisabled"
+            [multiselectOptions]="featureList" (selectItemEvent)="useSelectedFeatures($event)"></app-multiselect-dropdown>
+        </div>
+        <div class="col-12">
+          <app-multiselect-dropdown [selectedItems]="selectedUserSuppliedTagsList" [name]="'User supplied tags'" [multiselectOptions]="userSuppliedTagsList"
+            (selectItemEvent)="useSelectedTags($event)"></app-multiselect-dropdown>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary w-100" (click)="filterTable()">Filter</button>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="col-9">
+      <app-datatable [source]="datatableSource" [settings]="datatableSettings" (itemWasSelected)="addSelectedServerToList($event)"></app-datatable>
+    </div>
+  </div>
+  <!-- <div class="underline-solid w-100 mt-5"></div> -->
+  <div class="underline-divider mt-5"></div>
+  <div class="mt-4 d-flex align-items-center">
+    <a class="underline-link text-primary cursor-pointer mr-4 ml-5" (click)="returnToQuickSearch()">Hide advanced options</a>
+    <button class="btn btn-primary mr-4 w-25" (click)="showExecutiveDashboard()">Apply filter</button>
+    <span class="mr-4" (click)="clearAllFilters()">
+      <i class="fa fa-close text-danger cursor-pointer"></i>
+      <a class="underline-link text-danger cursor-pointer">
+        Clear selected
+      </a>
+    </span>
+  </div>
+</div>
+
+
+<!-- <div class="d-flex justify-content-end"><button class="btn btn-default" (click)="filterTable()">Filter</button></div> -->
+
+<!-- <div class="row my-4">
+  <div class="col">
+    <button class="btn btn-primary" (click)="showExecutiveDashboard()">Show</button>
+  </div>
+</div> -->
+<!-- </div> -->

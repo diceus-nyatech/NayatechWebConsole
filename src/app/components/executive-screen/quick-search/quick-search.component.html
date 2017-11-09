@@ -1,0 +1,39 @@
+<div class="container-quick-search right-border-panel">
+  <app-window-header [name]="'Search'" (deleteMeEvent)="deleteMyself()"></app-window-header>
+  <div class="pt-2 px-3">
+    <app-multiselect-dropdown [name]="'Servers'" [selectedItems]="selectedServers" [multiselectOptions]="serverList" (selectItemEvent)=useSelectedServers($event)>
+    </app-multiselect-dropdown>
+    <app-multiselect-dropdown [name]="'Features'" [selectedItems]="selectedFeatures" [multiselectOptions]="featureList" [disabled]="multiselectFeaturesDisabled"
+      (selectItemEvent)=useSelectedFeatures($event) [marginBottomClass]="''">
+    </app-multiselect-dropdown>
+    <div class="mb-4 mt-3 d-flex justify-content-center">
+        <a class="underline-link text-primary cursor-pointer" (click)="openAdvanedFilter()">Advanced filter</a>
+    </div>
+
+    <button class="btn btn-primary w-100 mt-1" (click)="openExecutiveDashboard()">Apply filter</button>
+    <div class="mt-2 d-flex justify-content-center align-items-center">
+        <i class="fa fa-close text-danger cursor-pointer mr-1" (click)="clearAllFilters()"></i>
+        <a class="underline-link text-danger cursor-pointer"  (click)="clearAllFilters()">
+          Clear selected
+        </a>
+    </div>
+
+    <!-- <div class="align-to-bottom">
+        <app-slider [minValue]="serverMinCost" [maxValue]="serverMaxCost" [step]="5000"
+         (onChangeSliderValueEvent)="openExecutiveDashboard($event)"
+         (onSwitchToggleEvent)="switchAvailibalityCostReduction()">
+        </app-slider>
+    </div> -->
+    <!-- <div [hidden]="hideAdvancedFilter">
+        <div class="mt-3"></div>
+        <app-multiselect-dropdown [name]="'Databases'" [multiselectOptions]="databaseList"></app-multiselect-dropdown>
+        <app-multiselect-dropdown [name]="'Instances'" [multiselectOptions]="instanceList"></app-multiselect-dropdown>
+        <app-select-dropdown [name]="'Oracle version'" [selectOptions]="oracleVersionList" [textPlaceholder]="'Select oracle version'"></app-select-dropdown>
+        <app-select-dropdown [name]="'Number of CPUs'" [selectOptions]="cpuNumberList" [textPlaceholder]="'Select number of CPUs'"></app-select-dropdown>
+        <app-select-dropdown [name]="'User supplied tags'" [selectOptions]="userSuppliedTagsList" [textPlaceholder]="'Select tags'"></app-select-dropdown>
+      </div> -->
+  </div>
+
+
+
+</div>

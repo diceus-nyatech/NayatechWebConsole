@@ -1,0 +1,101 @@
+<!-- <table class="table table-hover table-bordered">
+  <thead class="thead-default">
+    <tr>
+      <th>Server name</th>
+      <th>Cost</th>
+      <th>Date</th>
+      <th>Operation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td><button class="btn btn-default">Select</button></td>
+    </tr>
+    <tr>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td><button class="btn btn-default">Select</button></td>
+    </tr>
+    <tr>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td><button class="btn btn-default">Select</button></td>
+    </tr>
+    <tr>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td><button class="btn btn-default">Select</button></td>
+    </tr>
+    <tr>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td>Tgwo</td>
+      <td><button class="btn btn-default">Select</button></td>
+    </tr>
+  </tbody>
+</table> -->
+<!-- <label class="custom-control custom-checkbox">
+    <input type="checkbox" class="custom-control-input">
+    <span class="custom-control-indicator">
+        <span class="glyphicon glyphicon-ok"></span>
+    </span>
+    <span class="custom-control-description">Check this custom checkbox</span>
+</label> -->
+<div style="margin: auto;">
+  <data-table [items]="items" [indexColumn]="false" [selectColumn]="true" (reload)="reloadItems($event)" [itemCount]="itemCount" (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)">
+    <data-table-column *ngFor="let prop of properties"
+                        [property]="prop.property"
+                        [header]="prop.header"
+                        [sortable]="prop.sortable"
+                        [resizable]="prop.resizable"
+                        [width]="prop.width">
+    </data-table-column>
+    <!-- <data-table-column *ngIf="showOperations" [property]="'active'" [header]="'Operation'" [width]="100" [resizable]="true">
+        <ng-template #dataTableHeader let-item="item">
+          <span>Selected</span>
+        </ng-template>
+        <ng-template #dataTableCell let-item="item">
+          <span>
+            <input type="checkbox" class="checkbox" (click)="switchSelect($event)" [innerText]="'Select'">
+          </span>
+        </ng-template>
+      </data-table-column> -->
+  </data-table>
+</div>
+<!-- <div style="margin: auto;">
+  <data-table id="server-grid" [items]="items" [itemCount]="itemCount" (reload)="reloadItems($event)" (rowClick)="rowClick($event)"
+    (rowDoubleClick)="rowDoubleClick($event)" [rowTooltip]="rowTooltip">
+    <data-table-column [property]="'name'" [header]="'Server name'" [width]="200" [sortable]="true" [resizable]="true">
+    </data-table-column>
+    <data-table-column [property]="'date'" [header]="'Cost'" [width]="150" [sortable]="true">
+    </data-table-column>
+    <data-table-column property="phoneNumber" [header]="'Date'" [width]="150">
+    </data-table-column>
+    <data-table-column [property]="'active'" [header]="'Operation'" [width]="50" [resizable]="true">
+      <ng-template #dataTableHeader let-item="item">
+        <span>Active</span>
+      </ng-template>
+      <ng-template #dataTableCell let-item="item">
+        <span>
+          <button class="btn btn-default">Select</button>
+        </span>
+      </ng-template>
+    </data-table-column>
+  </data-table>
+</div> -->
+
+
+<!-- <span style="color: grey">
+              <span class="glyphicon glyphicon-ok" *ngIf="item.active"></span>
+              <span class="glyphicon glyphicon-remove" *ngIf="!item.active"></span>
+              </span> -->
+
+<!-- <ng-template #dataTableCell let-item="item">
+              <span>{{item.date | date:'yyyy-MM-dd'}}</span>
+          </ng-template> -->

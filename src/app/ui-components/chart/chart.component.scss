@@ -1,0 +1,21 @@
+.migration-score {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  position: relative;
+  bottom: 15px;
+}
+
+:host /deep/ {
+  .highcharts-container {
+    overflow-x: auto;
+  }
+  .highcharts-title {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  //  .highcharts-root {
+  //    width: 50px;
+  //  }
+}

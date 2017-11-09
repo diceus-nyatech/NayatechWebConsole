@@ -1,0 +1,27 @@
+@import "../../../../scss/mixins.scss";
+
+.container-feature-info {
+  // height: 87.7vh;
+  @include window-body-height;
+  overflow-y: auto;
+  @include color-main-window;
+}
+
+.cost-reduction{
+  display: flex;
+  .fa-dollar{
+    font-size: 1.25rem;
+  }
+  // position: relative;
+  // top: -1.75rem;
+  left: 15rem;
+  width: 25rem;
+  font-weight: 400;
+}
+
+.view-switch {
+  // position: absolute;
+  // top: 3rem;
+  // right: 1em;
+  // z-index: 9999;
+}

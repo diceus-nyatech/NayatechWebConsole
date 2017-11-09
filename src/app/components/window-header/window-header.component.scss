@@ -1,0 +1,40 @@
+@import "../../../scss/colors.scss";
+@import "../../../scss/navbar.scss";
+@import "../../../scss/variables.scss";
+
+.bg-window-header-azure{
+  background-color: $Mercury;
+  // color: $White;
+}
+
+.bg-component-window-header{
+  border-bottom: 1px solid $Silver;
+  background-color: $Gallery;
+
+  .window-header-operation:hover{
+    color: $White;
+  }
+}
+
+.window-header{
+  height: $navbarMainHeaderHeight;
+  border-bottom: 1px solid $BonJour;
+
+}
+
+.window-header-name{
+  @include nav-item-pad-h;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.window-header-operation{
+  padding: 0.35rem 0.35rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.window-header-operation:hover{
+  // background-color: $Thunderbird;
+  color: $Valencia;
+}

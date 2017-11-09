@@ -1,0 +1,62 @@
+@import "./colors.scss";
+@import "./variables.scss";
+
+@mixin nav-item-pad-h{
+  padding: 0 1em;
+  height: 2.5rem;
+}
+
+@mixin window-body-height{
+  // height: 87.7vh;
+  height: calc(100% - #{$navbarMainHeaderHeight - 1rem});
+  // height: 89.9vh;
+}
+
+// @mixin sidebars-height
+
+@mixin text-line-break-dots{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin dropdown-color{
+  background-color: $Porcelain;
+  border: 1px solid $Abbey;
+  color: $Abbey;
+}
+
+@mixin dropdown-color-hover{
+  background-color: $Alto;
+}
+
+@mixin dropdown-font-size{
+  font-size: 0.85rem;
+}
+
+@mixin dropdown-name{
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: $Abbey;
+}
+
+@mixin container-sidbar-search{
+  width: 18rem;
+  // height: 91.8vh;
+  height: 100%;
+  float: left;
+  // border-right: 2px solid $Silver;
+  background-color: $White;
+}
+
+@mixin color-main-window{
+  background-color: $White;
+}
+// @mixin sidebars-border-right{
+//   border-right: 1px solid $TundoraBorder;
+// }
+@mixin sidebar-height{
+  height: 100%;
+}
+
+// @mixin z-index-override{}

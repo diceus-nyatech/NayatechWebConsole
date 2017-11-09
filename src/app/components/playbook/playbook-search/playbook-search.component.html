@@ -1,0 +1,8 @@
+<div class="container-quick-search">
+  <app-window-header [name]="'Search'" (deleteMeEvent)="deleteMyself()">
+  </app-window-header>
+  <div class="p-2">
+    <app-select-dropdown [name]="'Migration from'" [selectOptions]="featureList" [textPlaceholder]="'Select features'"></app-select-dropdown>
+    <button class="btn btn-primary" (click)="showFeatureInfo()">Show information</button>
+  </div>
+</div>

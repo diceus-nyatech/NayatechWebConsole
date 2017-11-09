@@ -1,0 +1,17 @@
+@import "../../../scss/mixins.scss";
+
+.container-feature-info {
+  // height: 87.7vh;
+  @include window-body-height;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  @include color-main-window;
+}
+
+.container-window {
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  height: 100%;
+}

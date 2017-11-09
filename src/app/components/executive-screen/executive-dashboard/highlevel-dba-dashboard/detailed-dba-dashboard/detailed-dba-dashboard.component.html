@@ -1,0 +1,30 @@
+<div class="container-feature-info container-fluid">
+  <div class='mt-1'>Features for Migration</div>
+  <div class="row mt-3">
+    <div class="col">
+      <span class="bold-text">Hostname:</span>
+      <span>{{detailedDBAModel.hostName}}</span>
+    </div>
+    <div class="col">
+      <span class="bold-text">IP:</span>
+      <span>{{detailedDBAModel.ipAddress}}</span>
+    </div>
+    <div class="col">
+      <span class="bold-text">Oracle version:</span>
+      <span>{{detailedDBAModel.oracleVersion}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <span class="bold-text">Number of CPUs:</span>
+      <span>{{detailedDBAModel.cpuNumber}}</span>
+    </div>
+    <div class="col">
+      <span class="bold-text">Cost for the database:</span>
+      <span>{{detailedDBAModel.cost | formatMoney}}$</span>
+    </div>
+  </div>
+  <div class="mt-4">
+      <app-tree [nodes]="featureTreeItems"></app-tree>
+  </div>
+</div>

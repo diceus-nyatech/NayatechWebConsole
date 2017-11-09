@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-7"></div>
+    <div class="col-lg-4">
+      <div class="card" style="margin-top: 50%;">
+        <div class="card-block">
+          <div class="logo center" alt="Sign in to Naya Tech"></div>
+          <div class="signin">
+            <h4 class="mt-3 mb-3">
+              <i class="fa fa-lock" style="color: #ffae00 !important;"></i> Login To Your Account
+            </h4>
+            <div class="m-t" id="signin_form" role="form">
+              <div id="reset_password_email_sended" class="alert" style="display: none;">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email">
+                <!-- @Html.TextBoxFor(m => m.Email, new { @class = "form-control", id = "signin_email", placeholder = "Email" }) -->
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Password">
+                <!-- @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" }) -->
+              </div>
+              <a>
+                <!-- <button id="signin_btn"  [routerLink]="'/dashboard'" class="btn btn-primary block w-100 m-b">Sign In</button> -->
+                <button id="signin_btn"  (click)="logIn()" class="btn btn-primary block w-100 m-b">Sign In</button>
+              </a>
+              <a href="#" onclick="showResetPassForm()"><small>Forgot password</small></a>
+              <!-- <a class="btn btn-sm btn-white btn-block" onclick="showSignUpForm()" href="#">Sign Up</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

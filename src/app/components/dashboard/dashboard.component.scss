@@ -1,0 +1,11 @@
+@import "../../../scss/colors.scss";
+@import "../../../scss/variables.scss";
+
+.bg-main-azure{
+  // background-color: $Calypso;
+  // height: 100%;
+}
+
+.contaner-content{
+  height: calc(100% - #{$navbarMainHeaderHeight});
+}

@@ -1,0 +1,49 @@
+@import "../../../scss/colors.scss";
+@import "../../../scss/mixins.scss";
+
+:host /deep/ {
+  .dropdown-item {
+    padding: 3px 0.5rem;
+  }
+  .dropdown.dropdown-inline,
+  .dropdown-toggle.btn.btn-default.btn-secondary,
+  ul.dropdown-menu {
+    width: 100%;
+  }
+  .dropdown-item:active {
+    background-color: $Concrete;
+  }
+  .input-group {
+    height: 2.2rem;
+  }
+  .btn.btn-default {
+    // @include dropdown-color;
+    @include dropdown-font-size;
+    @include text-line-break-dots;
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+
+    span.caret{
+      margin-left: auto;
+    }
+  }
+
+  // .btn.btn-default:hover{
+  //   @include dropdown-color-hover;
+  // }
+
+}
+
+.multiselect-dropdown-name {
+  @include dropdown-name;
+}
+
+// :host >>> ss-multiselect-dropdown > button.btn.btn-default {
+//   background-color: red;
+// }
+
+// :host /deep/ button.btn.btn-default{
+//   background-color: red;
+// }
