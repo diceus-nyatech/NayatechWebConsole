@@ -23,7 +23,9 @@ export class DatatableComponent implements OnInit, OnChanges {
 
   @Input() source: any[];
   @Input() settings: IDatatableSettings;
-
+  @Input() showSelectColumn = false;
+  @Input() showHeader = false;
+  @Input() limit = 10;
   @Output() itemWasSelected = new EventEmitter();
 
 // pers2= [{ 'name': 'Aaron 2Moore', 'email': 'Heath44@hotmail.com',
@@ -50,6 +52,10 @@ export class DatatableComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.getItemsFromSource();
+    console.log('2');
+    // if (!this.showHeader) {
+    //   $('.table .thead').css('display', 'none');
+    // }
   }
   ngOnChanges (changes: SimpleChanges) {
     // only run when property "data" changed

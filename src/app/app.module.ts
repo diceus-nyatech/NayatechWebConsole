@@ -43,6 +43,7 @@ import { PdfGeneratorComponent } from './ui-components/pdf-generator/pdf-generat
 import { AnalyzeComponent } from './components/analyze/analyze.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormatMoneyPipe } from './pipes/format-money.pipe';
+import { ScanComponent } from './components/scan/scan.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { FormatMoneyPipe } from './pipes/format-money.pipe';
     AnalyzeComponent,
     HomeComponent,
     FormatMoneyPipe,
+    ScanComponent,
   ],
   imports: [
     BrowserModule,

@@ -33,7 +33,9 @@
       [chartItems]="filteredServers" [yAxisName]="'Migration complexity scores'" [yAxisMax]="100" (onItemSelectEvent)="onChartItemSelect($event)"></app-chart>
   </div>
   <div *ngIf="dataView == 'tableView'" class="dashboard-table">
-    <app-datatable [source]="costsItems" [settings]="datatableSettings" (itemWasSelected)="onDatatableItemSelect($event)"></app-datatable>
+    <app-datatable [source]="costsItems" [settings]="mainServersDatatableSettings"
+     (itemWasSelected)="onDatatableItemSelect($event)">
+    </app-datatable>
   </div>
   <div class="d-flex justify-content-between mt-4">
     <div class="" style="width: 50%; max-width: 50%">
@@ -41,9 +43,12 @@
         [seriesName]="'Cost'" [chartItems]="mostExpensiveItems" [chartType]="'bar'"
         [yAxisName]="'Cost, $'" (onItemSelectEvent)="onChartItemSelect($event)"></app-chart>
     </div>
-    <div class="" style="width: 50%; max-width: 50%">
-      <app-chart [color]="'RedOrange'" [title]="'Most Complex Databases'" [seriesName]="'Score'" [yAxisMax]="100" [chartItems]="mostComplexItems"
-        [yAxisName]="'Migration complexity scores'" (onItemSelectEvent)="onChartItemSelect($event)"></app-chart>
+    <div class="" style="width: 50%; max-width: 50%; height: 400px; overflow-y: auto;">
+      <app-datatable [limit]="'5'" [source]="mostComplexItems" [settings]="mostComplexServersDatatableSettings">
+
+      </app-datatable>
+      <!-- <app-chart [color]="'RedOrange'" [title]="'Most Complex Databases'" [seriesName]="'Score'" [yAxisMax]="100" [chartItems]="mostComplexItems"
+        [yAxisName]="'Migration complexity scores'" (onItemSelectEvent)="onChartItemSelect($event)"></app-chart> -->
     </div>
   </div>
 

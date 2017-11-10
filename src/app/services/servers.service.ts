@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import {ServerService} from './server.service';
 import {GuidGeneratorService} from './guid-generator.service';
 import {IChartItem} from '../interfaces/IChartItem';
+import {IServerMostComplexityItem} from '../interfaces/IServerMostComplexityItem';
 import { Subject} from 'rxjs/Subject';
 
 @Injectable()
 export class ServersService {
 
   mostExpensiveServers: Subject<IChartItem[]> = new Subject<IChartItem[]>();
-  mostComplicatedServers: Subject<IChartItem[]> = new Subject<IChartItem[]>();
+  mostComplicatedServers: Subject<IServerMostComplexityItem[]> = new Subject<IServerMostComplexityItem[]>();
   serversWithCost: Subject<IChartItem[]> = new Subject<IChartItem[]>();
   costReductionSelectedServers: Subject<number> = new Subject<number>();
 
@@ -48,7 +49,7 @@ export class ServersService {
     const vm = this;
     return vm.httpService.getServers().subscribe(response => {
       const servers = response.servers;
-      let serversWithScore: IChartItem[] = [];
+      let serversWithScore: IServerMostComplexityItem[] = [];
       for (let i1 = 0; i1 < servers.length; i1++) {
         const server = servers[i1];
         if (!vm.guidGeneratorService.elementWasSelected(server.server_name, selectedServers)) {
@@ -58,8 +59,10 @@ export class ServersService {
           continue;
         }
         let serverScore = 0;
+        let serverCost = 0;
         for (let i2 = 0; i2 < server.instances.length; i2++) {
           const instance = server.instances[i2];
+          serverCost += instance.cost;
           if (!instance.features) {
             continue;
           }
@@ -68,12 +71,12 @@ export class ServersService {
             serverScore += feature.score;
           }
         }
-        serversWithScore.push({name: server.server_name, value: serverScore});
+        serversWithScore.push({name: server.server_name, score: serverScore, cost: serverCost, rank: i1 + 1});
       }
       serversWithScore = serversWithScore.sort((a, b) => {
-        return b.value - a.value;
+        return b.score - a.score;
       });
-      serversWithScore = this.guidGeneratorService.slice(serversWithScore, 0, 5);
+      // serversWithScore = this.guidGeneratorService.slice(serversWithScore, 0, 5);
       this.mostComplicatedServers.next(serversWithScore);
     });
   }
@@ -112,7 +115,7 @@ export class ServersService {
       let serverCost = 0;
       for (let i1 = 0; i1 < servers.length; i1++) {
         const server = servers[i1];
-        if (!vm.guidGeneratorService.elementWasSelected(server.server_name, selectedServers)){
+        if (!vm.guidGeneratorService.elementWasSelected(server.server_name, selectedServers)) {
           continue;
         }
         if (!server.instances) {

@@ -39,7 +39,9 @@
       </div>
     </div>
     <div class="col-9">
-      <app-datatable [source]="datatableSource" [settings]="datatableSettings" (itemWasSelected)="addSelectedServerToList($event)"></app-datatable>
+      <app-datatable [source]="datatableSource" [showSelectColumn]="true" [showHeader]="false"
+       [settings]="datatableSettings" (itemWasSelected)="addSelectedServerToList($event)">
+      </app-datatable>
     </div>
   </div>
   <!-- <div class="underline-solid w-100 mt-5"></div> -->

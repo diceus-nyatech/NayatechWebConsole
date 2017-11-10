@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 import {IChartItem} from '../../../interfaces/IChartItem';
+import {IServerMostComplexityItem} from '../../../interfaces/IServerMostComplexityItem';
 import {IServerData} from '../../../interfaces/IServerData';
 import {IDatatableSettings} from '../../../interfaces/IDatatableSettings';
 import {WindowBodyComponent} from '../../window-body/window-body.component';
@@ -10,7 +11,6 @@ import {ServerService} from '../../../services/server.service';
 import {PdfGeneratorService} from '../../../services/pdf-generator.service';
 
 
-
 @Component({
   selector: 'app-executive-dashboard',
   templateUrl: './executive-dashboard.component.html',
@@ -18,6 +18,7 @@ import {PdfGeneratorService} from '../../../services/pdf-generator.service';
   providers: [GuidGeneratorService, ServersService, ServerService, PdfGeneratorService]
   // entryComponents: [WindowBodyComponent, HighlevelDbaDashboardComponent]
 })
+
 export class ExecutiveDashboardComponent implements OnInit {
 
 
@@ -36,10 +37,10 @@ export class ExecutiveDashboardComponent implements OnInit {
   // sliderStep = 10000;
 
   mostExpensiveItems: IChartItem[] = [];
-  mostComplexItems: IChartItem[] = [];
+  mostComplexItems: IServerMostComplexityItem[] = [];
   summaryCostReduction: string;
 
-  datatableSettings: IDatatableSettings = {showOperations: false, properties: [{
+  mainServersDatatableSettings: IDatatableSettings = {showOperations: false, properties: [{
     property: 'name',
     header: 'Server name',
     resizable: true,
@@ -53,6 +54,36 @@ export class ExecutiveDashboardComponent implements OnInit {
     sortable: true,
     width: 100,
   }
+]};
+
+mostComplexServersDatatableSettings: IDatatableSettings = {showOperations: false, properties: [{
+  property: 'rank',
+  header: 'Rank',
+  resizable: true,
+  sortable: true,
+  width: 100,
+},
+{
+  property: 'name',
+  header: 'Name',
+  resizable: true,
+  sortable: true,
+  width: 300,
+},
+{
+  property: 'score',
+  header: 'Complexity Score',
+  resizable: true,
+  sortable: true,
+  width: 200,
+},
+{
+  property: 'cost',
+  header: 'Cost',
+  resizable: true,
+  sortable: true,
+  width: 300,
+}
 ]};
 
   constructor(

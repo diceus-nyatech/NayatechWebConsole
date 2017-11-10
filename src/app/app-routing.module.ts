@@ -7,6 +7,8 @@ import {PlaybookComponent} from './components/playbook/playbook.component';
 import { FeatureDescriptionComponent } from './components/feature-description/feature-description.component';
 import { HelpComponent } from './components/help/help.component';
 import { HomeComponent } from './components/home/home.component';
+import {AnalyzeComponent} from './components/analyze/analyze.component';
+import {ScanComponent} from './components/scan/scan.component';
 
 const routes: Routes = [
   {
@@ -42,6 +44,16 @@ const routes: Routes = [
       {
         path: 'help',
         component: HelpComponent
+      }
+      ,
+      {
+        path: 'analyze',
+        component: AnalyzeComponent
+      }
+      ,
+      {
+        path: 'scan',
+        component: ScanComponent
       }
     ]
   }
