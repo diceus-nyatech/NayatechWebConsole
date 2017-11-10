@@ -48,7 +48,8 @@
     <span class="custom-control-description">Check this custom checkbox</span>
 </label> -->
 <div style="margin: auto;">
-  <data-table [items]="items" [indexColumn]="false" [selectColumn]="showSelectColumn"
+  <data-table [ngClass]="showHeader ? '' : 'delete-header'" [items]="items"
+   [indexColumn]="indexColumn" [indexColumnHeader]="indexColumnHeader" [selectColumn]="showSelectColumn"
    (reload)="reloadItems($event)" [itemCount]="itemCount" [limit]="limit"
    (rowClick)="rowClick($event)" (rowDoubleClick)="rowDoubleClick($event)">
     <data-table-column *ngFor="let prop of properties"

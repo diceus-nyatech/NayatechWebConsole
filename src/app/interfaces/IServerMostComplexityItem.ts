@@ -1,5 +1,5 @@
 export interface IServerMostComplexityItem {
-  rank: number;
+  // rank: number;
   name: string;
   score: number;
   cost: number;

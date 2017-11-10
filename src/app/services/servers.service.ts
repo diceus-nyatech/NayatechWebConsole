@@ -71,7 +71,7 @@ export class ServersService {
             serverScore += feature.score;
           }
         }
-        serversWithScore.push({name: server.server_name, score: serverScore, cost: serverCost, rank: i1 + 1});
+        serversWithScore.push({name: server.server_name, score: serverScore, cost: serverCost});
       }
       serversWithScore = serversWithScore.sort((a, b) => {
         return b.score - a.score;

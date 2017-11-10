@@ -44,45 +44,46 @@ export class ExecutiveDashboardComponent implements OnInit {
     property: 'name',
     header: 'Server name',
     resizable: true,
-    sortable: true,
-    width: 500,
+    sortable: true
+    // width: 500,
   },
   {
     property: 'value',
     header: 'Value',
     resizable: true,
-    sortable: true,
-    width: 100,
+    sortable: true
+    // width: 100,
   }
 ]};
 
-mostComplexServersDatatableSettings: IDatatableSettings = {showOperations: false, properties: [{
-  property: 'rank',
-  header: 'Rank',
-  resizable: true,
+mostComplexServersDatatableSettings: IDatatableSettings = {showOperations: false, properties: [
+//   {
+//   property: 'rank',
+//   header: 'Rank',
+//   resizable: true,
+//   sortable: true
+//   // width: 100,
+// },
+{
+  property: 'name',
+  header: 'Name',
+  resizable: false,
   sortable: true,
   width: 100,
 },
 {
-  property: 'name',
-  header: 'Name',
-  resizable: true,
-  sortable: true,
-  width: 300,
-},
-{
   property: 'score',
   header: 'Complexity Score',
-  resizable: true,
+  resizable: false,
   sortable: true,
-  width: 200,
+  width: 100,
 },
 {
   property: 'cost',
   header: 'Cost',
-  resizable: true,
+  resizable: false,
   sortable: true,
-  width: 300,
+  width: 100,
 }
 ]};
 

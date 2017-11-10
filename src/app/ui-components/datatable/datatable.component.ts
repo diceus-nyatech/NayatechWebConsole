@@ -26,6 +26,9 @@ export class DatatableComponent implements OnInit, OnChanges {
   @Input() showSelectColumn = false;
   @Input() showHeader = false;
   @Input() limit = 10;
+  @Input() indexColumn = false;
+  @Input() indexColumnHeader = '';
+
   @Output() itemWasSelected = new EventEmitter();
 
 // pers2= [{ 'name': 'Aaron 2Moore', 'email': 'Heath44@hotmail.com',

@@ -3,6 +3,6 @@ export interface IDatatableColumnProperty {
   header: string;
   sortable: boolean;
   resizable: boolean;
-  width: number;
+  width?: number;
 }
 

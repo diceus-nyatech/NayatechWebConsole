@@ -37,15 +37,16 @@
      (itemWasSelected)="onDatatableItemSelect($event)">
     </app-datatable>
   </div>
-  <div class="d-flex justify-content-between mt-4">
-    <div class="" style="width: 50%; max-width: 50%">
+  <div class="row mt-4">
+    <div class="col-6">
       <app-chart [color]="'Atlantis'" [title]="'Most Expensive Databases'" [titlePosition]="'left'"
         [seriesName]="'Cost'" [chartItems]="mostExpensiveItems" [chartType]="'bar'"
         [yAxisName]="'Cost, $'" (onItemSelectEvent)="onChartItemSelect($event)"></app-chart>
     </div>
-    <div class="" style="width: 50%; max-width: 50%; height: 400px; overflow-y: auto;">
-      <app-datatable [limit]="'5'" [source]="mostComplexItems" [settings]="mostComplexServersDatatableSettings">
-
+    <div class="col-6" style="height: 400px; overflow-y: auto;">
+      <app-datatable [limit]="5" [indexColumn]="true" [indexColumnHeader]="'Rank'"
+        [source]="mostComplexItems" [showHeader]="true"
+        [settings]="mostComplexServersDatatableSettings">
       </app-datatable>
       <!-- <app-chart [color]="'RedOrange'" [title]="'Most Complex Databases'" [seriesName]="'Score'" [yAxisMax]="100" [chartItems]="mostComplexItems"
         [yAxisName]="'Migration complexity scores'" (onItemSelectEvent)="onChartItemSelect($event)"></app-chart> -->
